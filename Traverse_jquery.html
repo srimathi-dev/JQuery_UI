@@ -1,0 +1,109 @@
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+	<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script>
+	<script>
+		$(document).ready(function () {
+			$(".heading").add("#para1").add("#span1").
+				css("background-color", "yellow");
+		});
+	</script>
+</head>
+
+<body>
+	<p style="color:green" class="heading">
+		Welcome to GfG!!!
+	</p>
+	<p style="color:green" id="para1">
+		Welcome to GeeksforGeeks !!!
+	</p>
+	<span style="color:green" id="span1">
+		Article 1 !!!.
+	</span>
+	<div>This example adds the same css style 
+		for both "p" and "span" elements, 
+		using its class and id name!!!
+	</div>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<style>
+		#h {
+			border: 2px solid white;
+		}
+
+		p,
+		div {
+			margin: 5px;
+			padding: 5px;
+			border: 2px solid green;
+		}
+
+		.border {
+			border: 2px solid red;
+		}
+
+		.background {
+			background: lightgrey;
+		}
+
+		.left,
+		.right {
+			width: 45%;
+			float: left;
+			border: 2px solid green;
+		}
+
+		.right {
+			margin-left: 3%;
+		}
+	</style>
+	<script src=
+"https://code.jquery.com/jquery-1.10.2.js">
+
+	</script>
+</head>
+
+<body>
+
+	<div class="left">
+		<p id="h">
+			<strong>Before
+				<code>addBack()</code>
+			</strong>
+		</p>
+		<div class="before-addback">
+			<p>First Paragraph</p>
+			<p>Second Paragraph</p>
+		</div>
+	</div>
+	<div class="right">
+		<p id="h">
+			<strong>After
+				<code>addBack()</code>
+			</strong>
+		</p>
+		<div class="after-addback">
+			<p>First Paragraph</p>
+			<p>Second Paragraph</p>
+		</div>
+	</div>
+
+	<script>
+		$(".before-addback").find("p").addClass(
+			"background");
+		$(".after-addback").addBack("p").addClass(
+			"background");
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!doctype html> 
+<html lang="en"> 
+
+<head> 
+	<meta charset="utf-8"> 
+	<link rel="stylesheet" href= 
+	"//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"> 
+	<script src="//code.jquery.com/jquery-1.12.4.js"></script> 
+	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+	<style> 
+		h1 { 
+			color: green; 
+		} 
+
+		div { 
+			color: white; 
+			display: flex; 
+			justify-content: center; 
+			align-items: center; 
+			text-align: center; 
+		} 
+
+		#div2 { 
+			width: 150px; 
+			height: 150px; 
+			background: blue; 
+		} 
+
+		#div1 { 
+			position: absolute; 
+			left: 250px; 
+			width: 200px; 
+			height: 200px; 
+			background: green; 
+			color: #fff; 
+		} 
+	</style> 
+</head> 
+
+<body> 
+	<h1>GeeksforGeeks</h1> 
+
+	<h3>jQuery UI Droppable accept Option</h3> 
+
+	<div id="div1">Drop here</div> 
+	<div id="div2">Drag me</div> 
+
+	<script> 
+		$("#div2").draggable(); 
+		$("#div1").droppable({ 
+			accept: "#div1" 
+		}); 
+        $("#div1").draggable({
+            revert: true
+        });
+	</script> 
+</body> 
+
+</html>
